@@ -1,3 +1,9 @@
 # sas-rep-new
 
-Static marketing site for a SaaS that reduces late invoice payments for small agencies and freelancers.
+Project overview goes here.
+
+## Setup
+- Add setup steps here.
+
+## Development
+- Add dev commands here.
