@@ -29,146 +29,150 @@
               <h1>sas-rep-new keeps momentum high.</h1>
               <p>A focused product built to ship faster with crisp alignment, instant status clarity, and zero‑meeting momentum.</p>
               <form id="waitlist-form" class="waitlist" aria-label="Join the waitlist">
-                <input type="email" name="email" placeholder="you@company.com" required />
-                <button type="submit" class="button button--solid">Join waitlist</button>
+                <label class="sr-only" for="email">Work email</label>
+                <input id="email" name="email" type="email" placeholder="Work email" required />
+                <button type="submit">Join waitlist</button>
               </form>
-              <div id="waitlist-status" class="form-status" role="status" aria-live="polite"></div>
+              <div id="waitlist-message" class="waitlist-message" role="status" aria-live="polite"></div>
               <div class="hero-meta">
                 <div>
-                  <h3>2x</h3>
-                  <p>faster handoffs</p>
+                  <strong>48%</strong>
+                  <span>faster handoffs</span>
                 </div>
                 <div>
-                  <h3>18 min</h3>
-                  <p>avg. weekly sync</p>
+                  <strong>2x</strong>
+                  <span>visibility</span>
                 </div>
                 <div>
-                  <h3>99%</h3>
-                  <p>status clarity</p>
+                  <strong>0</strong>
+                  <span>status meetings</span>
                 </div>
               </div>
             </div>
-            <div class="hero-card">
-              <div class="card-top">
-                <span>Live Pulse</span>
-                <span class="chip">Healthy</span>
+            <div class="hero-panel">
+              <div class="panel-top">
+                <span>Release Pulse</span>
+                <span class="status">Live</span>
               </div>
-              <h2>Launch readiness</h2>
-              <p>Auto-updated brief, owner, risks, and timeline with a single source of truth.</p>
-              <ul>
-                <li>Autopilot status narratives</li>
-                <li>Decision trails with context</li>
-                <li>Signal-first prioritization</li>
-              </ul>
+              <div class="panel-body">
+                <div class="pulse"></div>
+                <h3>Every team in sync</h3>
+                <p>Auto-summaries, decision logs, and sprint snapshots that actually ship.</p>
+              </div>
+              <div class="panel-list">
+                <div>
+                  <span class="dot"></span>
+                  <div>
+                    <strong>Design</strong>
+                    <p>Specs locked · 2 items pending</p>
+                  </div>
+                </div>
+                <div>
+                  <span class="dot"></span>
+                  <div>
+                    <strong>Eng</strong>
+                    <p>Build in motion · 14 tasks</p>
+                  </div>
+                </div>
+                <div>
+                  <span class="dot"></span>
+                  <div>
+                    <strong>GTM</strong>
+                    <p>Launch brief ready</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
           <section id="features" class="features reveal">
-            <div class="section-head">
-              <h2>Built for fast-moving teams</h2>
-              <p>Turn scattered updates into a single confident story for leadership and teammates.</p>
-            </div>
-            <div class="feature-grid">
+            <h2>Everything to keep launches on‑rails.</h2>
+            <div class="grid">
               <article>
-                <h3>Brief Builder</h3>
-                <p>Auto-generate status narratives from updates, docs, and releases.</p>
+                <h3>Instant rollups</h3>
+                <p>Auto-compile updates across squads with a single source of truth.</p>
               </article>
               <article>
-                <h3>Risk Radar</h3>
-                <p>Detect scope shifts early with AI summaries and red-flag alerts.</p>
+                <h3>Decision trails</h3>
+                <p>Capture why a choice was made, not just what changed.</p>
               </article>
               <article>
-                <h3>Decision Memory</h3>
-                <p>Capture the why behind every change with structured decision logs.</p>
+                <h3>Launch rhythm</h3>
+                <p>Set cadence, highlight blockers, and broadcast progress in real time.</p>
               </article>
               <article>
-                <h3>Momentum View</h3>
-                <p>Visualize delivery pace and blocker heatmaps in real time.</p>
-              </article>
-              <article>
-                <h3>Stakeholder Pulse</h3>
-                <p>Send targeted updates automatically to the right audience.</p>
-              </article>
-              <article>
-                <h3>Launch Readiness</h3>
-                <p>Ship with clarity using readiness checklists and owner lanes.</p>
+                <h3>Stakeholder ready</h3>
+                <p>Executive-ready briefs in seconds, not hours.</p>
               </article>
             </div>
           </section>
 
           <section id="workflow" class="workflow reveal">
-            <div class="section-head">
-              <h2>From chaos to clarity in four steps</h2>
+            <div>
+              <h2>Your workflow, tightened.</h2>
+              <p>Bring your team updates, specs, and milestones together with a feed that highlights what matters now.</p>
             </div>
-            <div class="timeline">
+            <div class="workflow-steps">
               <div>
                 <span>01</span>
-                <h3>Connect sources</h3>
-                <p>Plug in tickets, docs, and shipping tools in minutes.</p>
+                <h4>Collect signals</h4>
+                <p>Sync tools, notes, and build activity in minutes.</p>
               </div>
               <div>
                 <span>02</span>
-                <h3>Auto-summarize</h3>
-                <p>Instant briefs with highlights, deltas, and blockers.</p>
+                <h4>Curate momentum</h4>
+                <p>Highlights, blockers, and wins are surfaced automatically.</p>
               </div>
               <div>
                 <span>03</span>
-                <h3>Align teams</h3>
-                <p>Share narratives tailored for execs, eng, and PMs.</p>
-              </div>
-              <div>
-                <span>04</span>
-                <h3>Ship confidently</h3>
-                <p>Release with a live pulse of readiness and momentum.</p>
+                <h4>Publish direction</h4>
+                <p>Share launch briefs and decisions without slide decks.</p>
               </div>
             </div>
           </section>
 
           <section id="pricing" class="pricing reveal">
-            <div class="section-head">
-              <h2>Pricing that scales with momentum</h2>
-              <p>Start small, expand to full org alignment.</p>
-            </div>
-            <div class="pricing-grid">
+            <h2>Pricing that scales with shipping.</h2>
+            <div class="pricing-cards">
               <article>
-                <h3>Starter</h3>
-                <p class="price">$19<span>/seat</span></p>
+                <h3>Core</h3>
+                <p class="price">$0</p>
                 <ul>
-                  <li>2 sources connected</li>
-                  <li>Weekly auto brief</li>
-                  <li>Basic risk alerts</li>
+                  <li>3 squads</li>
+                  <li>Weekly rollups</li>
+                  <li>Decision log</li>
                 </ul>
-                <button class="button">Start trial</button>
+                <a class="button" href="#cta">Start free</a>
               </article>
-              <article class="featured">
-                <h3>Team</h3>
-                <p class="price">$39<span>/seat</span></p>
+              <article class="highlight">
+                <h3>Growth</h3>
+                <p class="price">$29</p>
                 <ul>
-                  <li>Unlimited sources</li>
-                  <li>Daily pulse updates</li>
-                  <li>Custom stakeholder views</li>
+                  <li>Unlimited squads</li>
+                  <li>Daily rollups</li>
+                  <li>Launch playbooks</li>
                 </ul>
-                <button class="button button--solid">Most popular</button>
+                <a class="button" href="#cta">Get access</a>
               </article>
               <article>
-                <h3>Scale</h3>
+                <h3>Enterprise</h3>
                 <p class="price">Let’s talk</p>
                 <ul>
-                  <li>Dedicated success lead</li>
-                  <li>Custom security & SSO</li>
-                  <li>Executive rollups</li>
+                  <li>Custom workflows</li>
+                  <li>Security review</li>
+                  <li>Dedicated support</li>
                 </ul>
-                <button class="button">Contact sales</button>
+                <a class="button ghost" href="#cta">Contact us</a>
               </article>
             </div>
           </section>
 
           <section id="cta" class="cta reveal">
             <div>
-              <h2>Replace status meetings with momentum.</h2>
-              <p>Join early access and help shape the future of product alignment.</p>
+              <h2>Stop shipping in the dark.</h2>
+              <p>Join the waitlist to get early access and launch momentum in days.</p>
             </div>
-            <a class="button button--solid" href="#waitlist-form">Get early access</a>
+            <a class="button" href="#waitlist-form">Join waitlist</a>
           </section>
         </main>
       </div>
