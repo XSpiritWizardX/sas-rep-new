@@ -1,58 +1,59 @@
-const revealElements = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+document.addEventListener('DOMContentLoaded', () => {
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+
+  const toggles = document.querySelectorAll('[data-billing]');
+  const priceEls = document.querySelectorAll('.price[data-month][data-year]');
+  const noteEls = document.querySelectorAll('.cycle-note[data-month-note][data-year-note]');
+
+  function setBilling(mode) {
+    toggles.forEach((btn) => btn.classList.toggle('is-active', btn.dataset.billing === mode));
+    priceEls.forEach((el) => {
+      el.textContent = mode === 'yearly' ? el.dataset.year : el.dataset.month;
     });
-  },
-  { threshold: 0.15 }
-);
+    noteEls.forEach((el) => {
+      el.textContent = mode === 'yearly' ? el.dataset.yearNote : el.dataset.monthNote;
+    });
+  }
 
-revealElements.forEach((el) => observer.observe(el));
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    const id = link.getAttribute('href');
-    const target = document.querySelector(id);
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  toggles.forEach((btn) => {
+    btn.addEventListener('click', () => setBilling(btn.dataset.billing));
   });
-});
 
-const form = document.getElementById('waitlist-form');
-const note = document.getElementById('form-note');
+  const form = document.getElementById('waitlist-form');
+  const emailInput = document.getElementById('email');
+  const note = document.getElementById('form-note');
 
-if (form && note) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const emailInput = form.querySelector('input[type="email"]');
-    if (!emailInput || !emailInput.value || !emailInput.checkValidity()) {
-      note.textContent = 'Enter a valid work email to continue.';
-      note.style.color = '#ffb59b';
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = emailInput.value.trim();
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!valid) {
+      note.textContent = 'Enter a valid work email to join the waitlist.';
+      note.classList.add('error');
+      emailInput.focus();
       return;
     }
 
-    const button = form.querySelector('button');
-    if (button) {
-      button.disabled = true;
-      button.textContent = 'Saving...';
-    }
+    note.classList.remove('error');
+    note.textContent = 'Reserving your spot...';
 
     setTimeout(() => {
-      note.textContent = 'You are on the waitlist. We will send your invite soon.';
-      note.style.color = '#98f9d7';
+      note.textContent = 'You are in. Watch your inbox for early access details.';
       form.reset();
-      if (button) {
-        button.textContent = 'Request invite';
-        button.disabled = false;
-      }
     }, 700);
   });
-}
-
-const year = document.getElementById('year');
-if (year) year.textContent = String(new Date().getFullYear());
+});
