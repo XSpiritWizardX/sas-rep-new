@@ -1,116 +1,134 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
     <title>sas-rep-new</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <link rel='stylesheet' href='styles.css' />
+    <script src='app.js' defer></script>
   </head>
   <body>
-    <div class="page">
-      <div class="orb orb--one" aria-hidden="true"></div>
-      <div class="orb orb--two" aria-hidden="true"></div>
-      <div class="grain" aria-hidden="true"></div>
+    <div class='page'>
+      <div class='orb orb--one' aria-hidden='true'></div>
+      <div class='orb orb--two' aria-hidden='true'></div>
+      <div class='grain' aria-hidden='true'></div>
 
-      <div class="shell">
-        <header class="nav">
-          <a class="logo" href="#top">sas-rep-new</a>
-          <nav class="nav-links" aria-label="Primary">
-            <a href="#features">Features</a>
-            <a href="#workflow">Workflow</a>
-            <a href="#pricing">Pricing</a>
+      <div class='shell'>
+        <header class='nav'>
+          <a class='logo' href='#top'>sas-rep-new</a>
+          <nav class='nav-links' aria-label='Primary'>
+            <a href='#features'>Features</a>
+            <a href='#workflow'>Workflow</a>
+            <a href='#pricing'>Pricing</a>
           </nav>
-          <a class="button button--ghost" href="#waitlist">Get Access</a>
+          <a class='button button--ghost' href='#waitlist'>Get Access</a>
         </header>
 
-        <main id="top">
-          <section class="hero reveal">
-            <div class="hero-copy">
-              <span class="badge">Ship faster • stay aligned</span>
+        <main id='top'>
+          <section class='hero reveal'>
+            <div class='hero-copy'>
+              <span class='badge'>Ship faster • stay aligned</span>
               <h1>Keep momentum high without the meeting drag.</h1>
-              <p>sas-rep-new gives product and engineering teams real-time clarity on what is blocked, what is next, and what ships now.</p>
-
-              <div class="hero-actions">
-                <a class="button" href="#waitlist">Join the Waitlist</a>
-                <a class="link" href="#features">See how it works</a>
+              <p>sas-rep-new gives product and engineering teams one live operating view for plans, blockers, and releases so execution never stalls.</p>
+              <div class='hero-actions'>
+                <a class='button' href='#waitlist'>Join waitlist</a>
+                <a class='button button--ghost' href='#pricing'>See pricing</a>
               </div>
-
-              <form id="waitlist-form" class="waitlist" aria-label="Join the waitlist" novalidate>
-                <label class="sr-only" for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@company.com" required />
-                <button type="submit">Request invite</button>
-              </form>
-              <p id="form-note" class="form-note" aria-live="polite"></p>
             </div>
-
-            <aside class="hero-panel">
-              <h2>Live pulse</h2>
+            <aside class='hero-panel'>
+              <p class='panel-kicker'>This week at a glance</p>
               <ul>
-                <li><span>Cycle time</span><strong>-34%</strong></li>
-                <li><span>Async updates</span><strong>92%</strong></li>
-                <li><span>On-time delivery</span><strong>2.4x</strong></li>
+                <li><span>12</span> active initiatives</li>
+                <li><span>4</span> blockers surfaced today</li>
+                <li><span>98%</span> roadmap confidence</li>
               </ul>
             </aside>
           </section>
 
-          <section id="features" class="section reveal">
-            <h2>Built for teams that ship weekly</h2>
-            <div class="cards">
-              <article class="card">
-                <h3>Signal-first dashboard</h3>
-                <p>Only critical updates surface. Noise is collapsed automatically.</p>
+          <section id='features' class='section reveal'>
+            <h2>Built for teams that move in weeks, not quarters.</h2>
+            <div class='feature-grid'>
+              <article class='card'>
+                <h3>Live Signal Feed</h3>
+                <p>Decisions, risks, and commits roll into one timeline so everyone reacts before issues become delays.</p>
               </article>
-              <article class="card">
-                <h3>Auto brief generation</h3>
-                <p>Convert work logs into crisp stakeholder updates in one click.</p>
+              <article class='card'>
+                <h3>Auto Status Narratives</h3>
+                <p>Turn raw execution data into clean updates stakeholders can trust without writing another recap doc.</p>
               </article>
-              <article class="card">
-                <h3>Decision memory</h3>
-                <p>Every shipped change links to context, owners, and impact.</p>
+              <article class='card'>
+                <h3>Launch Guardrails</h3>
+                <p>Release checks, ownership, and scope drift warnings keep launches crisp and predictable.</p>
               </article>
             </div>
           </section>
 
-          <section id="workflow" class="section reveal">
-            <h2>A tight, repeatable workflow</h2>
-            <ol class="steps">
-              <li><span>01</span>Capture async updates from tickets, PRs, and chat.</li>
-              <li><span>02</span>Rank risk and blockers with smart priority scoring.</li>
-              <li><span>03</span>Publish a clean status narrative for every release.</li>
+          <section id='workflow' class='section section--split reveal'>
+            <div>
+              <h2>Simple workflow. Serious control.</h2>
+              <p>Get the right signal at the exact moment decisions need to happen, from kickoff to launch day.</p>
+            </div>
+            <ol class='steps'>
+              <li><strong>Connect stack:</strong> GitHub, Jira, Slack, Linear, and calendar data in under 10 minutes.</li>
+              <li><strong>Define outcome:</strong> tie workstreams to measurable delivery goals and owners.</li>
+              <li><strong>Run weekly pulse:</strong> the platform drafts status and highlights execution risk automatically.</li>
             </ol>
           </section>
 
-          <section id="pricing" class="section reveal">
-            <h2>Pricing that scales with delivery speed</h2>
-            <div class="cards pricing">
-              <article class="card">
+          <section id='pricing' class='section reveal'>
+            <div class='pricing-head'>
+              <h2>Pricing that scales with momentum.</h2>
+              <div class='billing-toggle' role='tablist' aria-label='Billing cycle'>
+                <button class='toggle is-active' type='button' data-billing='monthly'>Monthly</button>
+                <button class='toggle' type='button' data-billing='yearly'>Yearly</button>
+              </div>
+            </div>
+            <div class='price-grid'>
+              <article class='price-card'>
                 <h3>Starter</h3>
-                <p class="price">$29<span>/seat</span></p>
-                <p>Core updates + weekly digest.</p>
+                <p class='price' data-month='$19' data-year='$15'>$19</p>
+                <p class='cycle-note' data-month-note='per seat / month' data-year-note='per seat / month, billed yearly'>per seat / month</p>
+                <ul>
+                  <li>Up to 12 contributors</li>
+                  <li>Core dashboards</li>
+                  <li>Email support</li>
+                </ul>
               </article>
-              <article class="card featured">
+              <article class='price-card price-card--focus'>
+                <p class='pill'>Most chosen</p>
                 <h3>Growth</h3>
-                <p class="price">$59<span>/seat</span></p>
-                <p>Advanced automation + custom workflows.</p>
+                <p class='price' data-month='$39' data-year='$32'>$39</p>
+                <p class='cycle-note' data-month-note='per seat / month' data-year-note='per seat / month, billed yearly'>per seat / month</p>
+                <ul>
+                  <li>Unlimited contributors</li>
+                  <li>Advanced automations</li>
+                  <li>Priority support</li>
+                </ul>
               </article>
-              <article class="card">
-                <h3>Enterprise</h3>
-                <p class="price">Custom</p>
-                <p>Security controls, SSO, and dedicated onboarding.</p>
+              <article class='price-card'>
+                <h3>Scale</h3>
+                <p class='price' data-month='Custom' data-year='Custom'>Custom</p>
+                <p class='cycle-note' data-month-note='annual contract' data-year-note='annual contract'>annual contract</p>
+                <ul>
+                  <li>Security review pack</li>
+                  <li>Custom data policies</li>
+                  <li>Dedicated CSM</li>
+                </ul>
               </article>
             </div>
           </section>
 
-          <section id="waitlist" class="section cta reveal">
-            <h2>Early access opens this quarter.</h2>
-            <a class="button" href="#email">Reserve your spot</a>
+          <section id='waitlist' class='section waitlist reveal'>
+            <h2>Request early access</h2>
+            <p>Join teams piloting sas-rep-new for Spring planning cycles.</p>
+            <form id='waitlist-form' novalidate>
+              <label for='email' class='sr-only'>Work email</label>
+              <input id='email' name='email' type='email' placeholder='you@company.com' required />
+              <button type='submit' class='button'>Reserve spot</button>
+            </form>
+            <p id='form-note' class='form-note' role='status' aria-live='polite'></p>
           </section>
         </main>
-
-        <footer class="footer">
-          <small>© <span id="year"></span> sas-rep-new</small>
-        </footer>
       </div>
     </div>
   </body>
